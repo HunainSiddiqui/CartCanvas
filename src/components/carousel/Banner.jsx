@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
-const Item = ({ item, index }) => (
+const Item = ({ item, index,pageWidth  }) => (
   <div className={`carousel-item ${index === 0 ? "active" : ""}`}>
     <Link to={item.to}>
       <div
@@ -50,8 +50,8 @@ const Item = ({ item, index }) => (
            />
            
             }
-            {item.title && <h3>{item.title}</h3>}
-            {item.description && <p>{item.description}</p>}
+             {item.title && (pageWidth <= 600 ? <h5>{item.title}</h5> : <h3>{item.title}</h3>)}
+            {pageWidth > 1432 && item.description && <p>{item.description}</p>}
           </div>
         )}
       </div>
@@ -70,6 +70,17 @@ const Indicator = ({ item, index }) => (
 
 const Banner = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
+   useEffect(() => {
+    const handleResize = () => {
+      setPageWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -95,7 +106,7 @@ const Banner = (props) => {
     
       <div className="carousel-inner">
         {props.data.map((item, index) => (
-          <Item item={item} index={index} key={index} />
+          <Item item={item} index={index} key={index} pageWidth={pageWidth}  />
         ))}
       </div>
       <a
