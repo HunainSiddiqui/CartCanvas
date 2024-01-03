@@ -70,6 +70,7 @@ const Indicator = ({ item, index }) => (
 
 const Banner = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [pageWidth, setPageWidth] = useState(window.innerWidth);
    useEffect(() => {
     const handleResize = () => {
       setPageWidth(window.innerWidth);
