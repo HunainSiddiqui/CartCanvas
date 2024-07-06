@@ -2,6 +2,7 @@ import React, { lazy, Component } from "react";
 import { Link } from "react-router-dom";
 // import { link45, file, check2all } from "../npm/icon";
 import ProductItem from "./ProductItem"
+import axios from "axios";
 import { data } from "../data";
 import { ReactComponent as IconLaptop } from "bootstrap-icons/icons/laptop.svg";
 import { ReactComponent as IconHeadset } from "bootstrap-icons/icons/headset.svg";
@@ -32,6 +33,18 @@ class HomeView extends Component {
     IconHdd: IconHdd,
     IconUpcScan: IconUpcScan,
     IconTools: IconTools,
+  };
+  componentDidMount() {
+    this.wakeUpServer();
+  }
+
+  wakeUpServer = async () => {
+    try {
+      const response = await axios.get('https://ecommersebackend1.onrender.com/api/v1/wake-up');
+      console.log('Server wake-up response:', response.data);
+    } catch (error) {
+      console.error('Error waking up the server:', error);
+    }
   };
 
   render() {
