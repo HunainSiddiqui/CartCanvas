@@ -9,7 +9,7 @@ class ForgotPasswordView extends Component {
   onSubmit = async (values) => {
 
 
-    axios.post("https://ecommersebackend1.onrender.com/api/v1/forgetPassword", {
+    axios.post("https://cartcanvas-api.hunain.live/api/v1/forgetPassword", {
       email: values.email,
     },
     {

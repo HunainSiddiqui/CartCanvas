@@ -40,7 +40,7 @@ class HomeView extends Component {
 
   wakeUpServer = async () => {
     try {
-      const response = await axios.get('https://ecommersebackend1.onrender.com/api/v1/wake-up');
+      const response = await axios.get('https://cartcanvas-api.hunain.live/api/v1/wake-up');
       console.log('Server wake-up response:', response.data);
     } catch (error) {
       console.error('Error waking up the server:', error);

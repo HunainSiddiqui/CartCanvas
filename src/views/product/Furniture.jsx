@@ -55,17 +55,17 @@ function Furniture() {
     let link;
     if (selectedCategory === "") {
       if (searchedText) {
-        link = `https://groceriesbackend.onrender.com/api/v1/items?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}&keyword=${searchedText}`;
+        link = `https://cartcanvas-api.hunain.live/api/v1/items?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}&keyword=${searchedText}`;
         console.log("Searched text:", searchedText);
         localStorage.removeItem("searched");
       } else {
-        link = `https://groceriesbackend.onrender.com/api/v1/items?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}`;
+        link = `https://cartcanvas-api.hunain.live/api/v1/items?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}`;
       }
     } else {
       if (searchedText) {
-        link = `https://groceriesbackend.onrender.com/api/v1/items?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}&keyword=${searchedText}`;
+        link = `https://cartcanvas-api.hunain.live/api/v1/items?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}&keyword=${searchedText}`;
       } else {
-        link = `https://groceriesbackend.onrender.com/api/v1/items?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}`;
+        link = `https://cartcanvas-api.hunain.live/api/v1/items?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}`;
       }
     }
 

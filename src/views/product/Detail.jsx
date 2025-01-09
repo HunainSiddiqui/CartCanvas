@@ -76,12 +76,12 @@ function ProductDetailView() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://ecommersebackend1.onrender.com/api/v1/product/${id}`
+        `https://cartcanvas-api.hunain.live/api/v1/product/${id}`
       );
       if (response.status == 200) {
         try {
           const res = await axios.get(
-            `https://ecommersebackend1.onrender.com/api/v1/products?category=${response.data.product.category}`
+            `https://cartcanvas-api.hunain.live/api/v1/products?category=${response.data.product.category}`
           );
 
           setfeaturedproduct(res.data.products);
@@ -100,7 +100,7 @@ function ProductDetailView() {
   const featureproduct = async () => {
     try {
       const response = await axios.get(
-        `https://ecommersebackend1.onrender.com/api/v1/products?category=${productdata.category}`
+        `https://cartcanvas-api.hunain.live/api/v1/products?category=${productdata.category}`
       );
       console.log(response.data.product);
       setfeaturedproduct(response.data.product);

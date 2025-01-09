@@ -90,7 +90,7 @@ const PrimarySearchAppBar = ({ classes }) => {
   const handlelogout = async () => {
     try {
       const res = await axios.get(
-        "https://ecommersebackend1.onrender.com/api/v1/logout"
+        "https://cartcanvas-api.hunain.live/api/v1/logout"
       );
       if (res.status === 200) {
         localStorage.clear();

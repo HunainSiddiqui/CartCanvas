@@ -59,7 +59,7 @@ function CheckoutView() {
     console.log(formdata);
           try {
             const res = await axios.post(
-              "https://ecommersebackend1.onrender.com/api/v1/order/new",
+              "https://cartcanvas-api.hunain.live/api/v1/order/new",
               formdata,
               {
                 withCredentials: true,

@@ -33,7 +33,7 @@ const ProfileForm = (props) => {
   const handle = async() => {
     try {
       const res = await axios.get(
-        "https://ecommersebackend1.onrender.com/api/v1/me",
+        "https://cartcanvas-api.hunain.live/api/v1/me",
         {
           withCredentials: true,
           crossDomain: true,
@@ -59,7 +59,7 @@ const ProfileForm = (props) => {
 
   const handleSubmitForm = (formData) => {
     // Send a PUT request to update the user's information
-    axios.put("https://ecommersebackend1.onrender.com/api/v1/me/update", {
+    axios.put("https://cartcanvas-api.hunain.live/api/v1/me/update", {
       name: formData.name,
       email: formData.email,
     },

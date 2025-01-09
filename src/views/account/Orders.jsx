@@ -26,7 +26,7 @@ function OrdersView(props) {
   const handle = async() => {
     try {
       const res = await axios.get(
-        "https://ecommersebackend1.onrender.com/api/v1/orders/me",
+        "https://cartcanvas-api.hunain.live/api/v1/orders/me",
         {
           withCredentials: true,
           crossDomain: true,

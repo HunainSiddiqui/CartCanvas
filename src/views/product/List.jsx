@@ -72,7 +72,7 @@ function ProductListView() {
     
   
    
-    let link = `https://ecommersebackend1.onrender.com/api/v1/products?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}`;
+    let link = `https://cartcanvas-api.hunain.live/api/v1/products?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}`;
 
 if (searchedText && selectedCategory) {
  
@@ -80,7 +80,7 @@ if (searchedText && selectedCategory) {
     {
       if (selectedCategory !== "all") {
       
-      link = `https://ecommersebackend1.onrender.com/api/v1/products?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}&category=${selectedCategory}`;
+      link = `https://cartcanvas-api.hunain.live/api/v1/products?page=${currentPage}&price[gte]=${priceValue[0]}&price[lte]=${priceValue[1]}&ratings[gte]=${rating}&category=${selectedCategory}`;
       }}
   else{
     

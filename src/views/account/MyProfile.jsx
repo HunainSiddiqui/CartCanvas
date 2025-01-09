@@ -20,7 +20,7 @@ class MyProfileView extends Component {
 
   onSubmitChangePassword = async (values) => {
     const navigate = useNavigate();
-    axios.put("https://ecommersebackend1.onrender.com/api/v1/password/update", {
+    axios.put("https://cartcanvas-api.hunain.live/api/v1/password/update", {
       oldPassword:values.currentPassword,
       newPassword: values.password,
       confirmPassword: values.confirmPassword
