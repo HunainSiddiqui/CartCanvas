@@ -7,7 +7,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./reducers";
 import { loadState, saveState } from "./localStorage";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const persistedState = loadState();
 const store = createStore(rootReducer, persistedState);
 
